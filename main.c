@@ -59,6 +59,7 @@ int main(int argc, char *argv[]) {
 	
 	bingo_init();
 	
+	
 	while (check_gameEnd() == BINGO_RES_UNFINISHED)
 	{
 		bingo_printBoard();

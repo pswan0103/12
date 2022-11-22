@@ -30,7 +30,7 @@ void bingo_init(void)
 		
 	for (i=0; i<N_SIZE; i++) {
 		for (j=0; j<N_SIZE; j++) {
-			randNum = rand()%(maxNum-1);
+			randNum = rand()%(maxNum);
 			
 			for (k=0; k<N_SIZE*N_SIZE; k++) {
 				if (numberStatus[k] == BINGO_NUMSTATUS_ABSENT) //гр╢Г ╬х ╣й 
@@ -46,7 +46,7 @@ void bingo_init(void)
 			}
 			bingoBoard[i][j] = k+1; 
 			numberStatus[k] = N_SIZE*i+j;
-			//maxNum--;
+			maxNum--;
 		}
 	}
 }
